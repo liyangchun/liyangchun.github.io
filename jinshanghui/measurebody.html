@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>今尚荟高级定制官网</title>
+    <script src="js/jquery-1.9.1.js"></script>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jsAddress.js"></script>
+     <script src="js/jquery.validate.js"></script>
+    <script src="js/validate-methods.js"></script>
+    <script src="js/messages_cn.js"></script>
+    <script src="js/measurebody.js"></script>
+    <style>
+    *{ margin:0; padding:0;}
+	
+    </style> 
+</head>
+<body>
+   <script src="js/head.js" type="text/javascript"></script>
+      <div class="banner-bg"><img src="images/liangti.jpg"/></div>
+    <section class="measurebody-1">
+        <div class="content">
+            <img src="images/get.jpg"/>
+        </div>
+    </section>
+    <section class="measurebody-2">
+     <form action="" id="bodyForm">
+     <input type="hidden" name="action" value="1" />
+        <div class="content text-center">
+            <div class="title"><h2>享受今尚荟高端定制服务用户已达：<br><span>26889</span></h2></div>
+          <div class="subscribe clearfix">
+            <ul>
+                    <li class="clearfix">
+                        <div class="pull-left">
+                            <img src="images/xingming.jpg"/>
+                            <span>姓名</span>
+                        </div>
+                        <div class="pull-right">
+                            <input type="text" id="userName" name="username" placeholder="请输入姓名，免费预约美女上门量体">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="pull-left">
+                            <img src="images/dianhua.jpg"/>
+                            <span>电话</span>
+                        </div>
+                        <div class="pull-right">
+                            <input type="text" id="phone" name="phone" placeholder="请输入手机号码，等待专员联系您确认预约信息">
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="pull-left">
+                            <img src="images/diqu.jpg"/>
+                            <span>地区</span>
+                        </div>
+                        <div class="pull-right text-left">
+                             <select id="cmbProvince"></select>
+                             <select id="cmbCity"></select>
+                             <select id="cmbArea"></select>
+                             <input type="hidden" name="selProvince" id="selProvince"> 
+                             <input type="hidden" name="selCity" id="selCity">
+                             <input type="hidden" name="selArea" id="selArea">
+                        </div>
+                    </li>
+                     <li class="clearfix">
+                        <div class="pull-left">
+                            <img src="images/beizhu.jpg"/>
+                            <span>备注</span>
+                        </div>
+                        <div class="pull-right">
+                            <textarea rows="4" placeholder="填写希望量体的时间地点和偏好的衣服品类等" name="mcontent"></textarea>
+                        </div>
+                    </li>
+              </ul>
+            </div>
+            <div class="submitbtn text-center">
+                  <input type="submit" value="提交预约"/>
+              </div>
+        </div>
+        </form>
+    </section>
+    <section class="measurebody-3">
+        <div class="content">
+            <div class="title text-center"><h3>我们将为您提供轻松而专业的高端定制服务</h3></div>
+            <div class="film_focus">
+				<div class="film_focus_imgs_wrap">
+					<ul class="film_focus_imgs">
+						<li><a target="_blank" href="javascript:;"><img width="607" height="387" src="images/slide1.png"></a></li>
+						<li><a target="_blank" href="javascript:;"><img width="607" height="387" src="images/slide2.png"></a></li>
+						<li><a target="_blank" href="javascript:;"><img width="607" height="387" src="images/slide3.png"></a></li>
+                        <li><a target="_blank" href="javascript:;"><img width="607" height="387" src="images/slide4.png"></a></li>	
+					</ul>
+				</div>
+					
+				<div class="film_focus_desc">
+					<ul class="film_focus_nav">
+						<li class="">
+							上门量体无需任何费用
+						</li>
+						<li class="">
+							时间地点根据您的需求调整
+						</li>
+						<li class="cur">
+							为您分配专业的私人着装顾问
+						</li>
+						<li class="">
+							30天无忧售后
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+        </div>
+    </section>
+    <div class="ContactUs text-center">
+        <img src="images/hengxian.jpg"/>
+        <p>联系我们<br>您的私人着装顾问，为您度身定制<br>TEL: 400-969-3266</p>
+    </div> 
+     <script src="js/foot.js" type="text/javascript"></script>
+       <script type="text/javascript">
+           addressInit('cmbProvince', 'cmbCity', 'cmbArea', '广东', '广州市', '白云区', 'selProvince', 'selCity', 'selArea');
+</script>
+    
+    <script type="text/javascript">
+			(function(A){
+				A.fn.th_video_focus=function(E){
+					
+					var G={
+						actClass:"cur",
+						navContainerClass:".focus_pic_preview",
+						focusContainerClass:".focus_pic",
+						animTime:600,
+						delayTime:5000
+					};
+					
+					if(E){
+						A.extend(G,E)
+					}
+					
+					var C=G.actClass, D=G.navContainerClass, B=G.focusContainerClass, F=G.animTime, H=G.delayTime, I=null;
+					
+					return this.each(function(){
+						
+						var O=A(this), M=A(D+" li",O), P=A(B+" li",O), L=M.length, K=O.height();
+						
+						function N(R){
+							var V=K*R*-1;
+							var U=A(B+" li",O), W=null, T=null;
+							for(var S=0;S<=R;S++){
+								W=U.eq(S);
+								T=W.find('script[type="text/templ"]');
+								if(T.length>0){
+									W.html(T.html())
+								}
+							}
+							A(B,O).stop().animate({top:V},F,function(){
+								var Y=O.find("h3"), X=Y.height();
+								Y.height(0).html(A(B+" li").eq(R).find("img").attr("alt")).animate({height:X},600)
+							});
+							A(D+" li").eq(R).addClass(C).siblings().removeClass(C)
+						}
+						
+						function Q(){
+							if(I){
+								clearInterval(I)
+							}
+							I=setInterval(function(){
+								var R=A(D+" li."+C).index();
+								N((R+1)%L)
+							},H)
+						}
+						
+						O.hover(function(){
+							if(I){
+								clearInterval(I)
+							}
+						},function(){
+							Q()
+						});
+					
+						var J=null;
+						
+						M.hover(function(){
+							
+							var R=A(this).index();
+							
+							if(I){
+								clearInterval(I)
+							}
+							J=setTimeout(function(){
+								N(R)
+							},300)
+						},function(){
+							if(J){
+								clearTimeout(J)
+							}
+							Q()
+						}).click(function(T){
+							var R=A(this).index(), S=P.eq(R).find("a");
+							if(document.uniqueID||window.opera){
+								S[0].click();
+								T.stopPropagation();
+								T.preventDefault()
+							}
+						});
+						
+						Q()
+						
+					})
+				}
+				
+			})(jQuery);
+			
+			$(function(){							
+				//第二个焦点图
+				$(".film_focus").th_video_focus({
+					navContainerClass:".film_focus_nav",
+					focusContainerClass:".film_focus_imgs",
+					delayTime:3000
+				});
+				
+			});	
+			</script>
+   
+
+</body>
+</html>
