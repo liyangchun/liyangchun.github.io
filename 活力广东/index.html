@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="webpage/css/phoneindex.css" media="screen and (max-width:633px)" />
+	<link rel="stylesheet" type="text/css" href="webpage/css/index.css" media="screen and (min-width:633px)" />
+	<link rel="stylesheet" type="text/css" href="webpage/css/animate.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>活力广东</title>
+	<!--<link rel="stylesheet" type="text/css" href="css/index.css"/>-->
+
+	<script type="text/javascript">
+		window.onload=function  () {
+		 	var oulsina=document.getElementById("ulsina");
+		 	var oulblog=document.getElementById("ulblog");
+		 	var ali=oulsina.getElementsByTagName('li');
+		 	var iHeight=ali[0].offsetHeight;
+		 	var itop=0;
+		 	var endT=2*iHeight;
+		 	var timer1=null;
+		 	var bol=true;
+		 	
+		 	
+			timer1= setInterval(function() {
+				
+				if(bol){
+					itop+=iHeight;
+					if(itop>=endT){
+						bol=false;
+					}
+				}
+				else{
+					itop-=iHeight;
+					if(itop<=0){
+						bol=true;
+					}
+				}
+				oulsina.style.top=-itop+"px";
+			}, 2000);
+			
+			var btop=0;
+			var endB=2*iHeight;
+			var bol2=true;
+			timer2= setInterval(function() {
+				
+				if(bol2){
+					btop+=iHeight;
+					if(btop>=endB){
+						bol2=false;
+					}
+				}
+				else{
+					btop-=iHeight;
+					if(btop<=0){
+						bol2=true;
+					}
+				}
+				oulblog.style.top=-btop+"px";
+			}, 3000);
+		}
+	</script>
+</head>
+
+<body>
+	<img src="webpage/images/bg.png" id="bg" />
+	<div id="wrap">
+		<div class="header">
+			<img class="animated bounceIn" src="webpage/images/logo.png" / id="lo">
+			<img src="webpage/images/welcome.png" id="log2" />
+			<iframe  id="y" name="weather_inc" width="800" scrolling="no" height="120" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=19&color=%23FFFFFF&icon=1&py=guangzhou&temp=0&num=1"></iframe>
+			<iframe  id="x" width="161" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=3&wind=1&num=1"></iframe>
+		</div>
+		<div class="content clear">
+			<div class="fl">
+				<ul class="clear">
+					<li class="animated" id="li1">
+						<a target="_blank" href="http://www.visitgd.com/ch/index.aspx">
+							<img src="webpage/images/visit.png" />
+						</a>
+					</li>
+					<li class="m animated bounceIn">
+						<a target="_blank" href="http://gdtec.gov.cn/GDTEC/contract/querymycontract">
+							<img src="webpage/images/contract.png" />
+						</a>
+					</li>
+					<li class="animated bounceIn">
+						<a target="_blank" href="http://www.gdta.gov.cn/default.html">
+							<img src="webpage/images/admin.png" />
+						</a>
+					</li>
+					<li class="m animated shake">
+						<a target="_blank" href="http://dy.gdta.gov.cn/">
+							<img src="webpage/images/guide.png" />
+						</a>
+					</li>
+					<li class="animated shake">
+						<a target="_blank" href="http://www.citie.gov.cn/default.html">
+							<img src="webpage/images/expo.png" />
+						</a>
+					</li>
+					<li class="m animated bounceIn">
+						<a target="_blank" href="http://www.gdta.gov.cn/exam/login.do">
+							<img src="webpage/images/axam.png" />
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="fr clear">
+				<ul class="clear">
+
+					<li class="m animated bounceIn">
+						<a target="_blank" href="http://data.gdta.gov.cn/search.do?actions=search">
+							<img src="webpage/images/sjzx.png" />
+						</a>
+					</li>
+					<li class="l clear animated bounceIn" style="position:relative;">
+						<div>
+							<ul class="ul-roll" id="ulsina">
+								<li><a target="_blank" href="http://weibo.com/visitgd">广东省旅游局官方微博</a>
+								</li>
+                                <li><a target="_blank" href="http://weibo.com/visitgd">广东省旅游局官方微博</a>
+								</li>
+								<li><a target="_blank" href="http://weibo.com/visitgd">广东省旅游局官方微博</a>
+								</li>
+							</ul>
+						</div>
+						<a target="_blank" href="http://weibo.com/visitgd">
+							<img src="webpage/images/sina.png" />
+						</a>
+					</li>
+
+					<li class="m animated bounceIn">
+						<a target="_blank" href="http://www.gdta.gov.cn/html/bsdt.htm">
+							<img src="webpage/images/hall.png" />
+						</a>
+					</li>
+					<li class="l clear animated bounceIn" style="position:relative;">
+						<div>
+							<ul class="ul-roll" id="ulblog">
+								<li><a target="_blank" href="http://e.t.qq.com/visitgd">广东省旅游局官方微博</a>
+                                </li>
+                                <li><a target="_blank" href="http://e.t.qq.com/visitgd">广东省旅游局官方微博</a>
+								</li>
+                                 <li><a target="_blank" href="http://e.t.qq.com/visitgd">广东省旅游局官方微博</a>
+								</li>
+	
+							</ul>
+						</div>
+						<a target="_blank" href="http://e.t.qq.com/visitgd">
+							<img src="webpage/images/tencent.png" />
+						</a>
+					</li>
+
+					<li class="x-1 animated shake">
+						<a target="_blank" href="http://www.yooyo.com/">
+							<img src="webpage/images/traval.png" />
+						</a>
+					</li>
+					<!--<li class="x-2 animated bounceIn">
+						<a href="javascript:void(0);">
+							<img src="webpage/images/time.png" />
+						</a>
+					</li>-->
+					<li class="x-3 animated shake">
+						<a target="_blank" href="http://visitgd.com/Ch/Info/NewsInfo.aspx?id=e6b0637e-c4b5-42b4-8b79-0dd478de30251898493319">
+							<img src="webpage/images/weico.png" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<img src="webpage/images/serial.png" />
+		</div>
+
+	</div>
+</body>
+
+</html>
